@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2021_05_13_101402) do
   create_table "bookmarks", force: :cascade do |t|
     t.bigint "movie_id", null: false
     t.bigint "list_id", null: false
+    t.text "comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["list_id"], name: "index_bookmarks_on_list_id"
